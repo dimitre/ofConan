@@ -25,7 +25,7 @@ jobs:
     steps:
       - if: ${{ runner.os == 'Linux' }}
       # if: matrix.os == 'ubuntu-latest'
-        run: apt-get install libgtk2.0-dev
+        run: sudo apt-get install libgtk2.0-dev
       - uses: actions/checkout@v2
       - name: Install Conan
         id: conan
