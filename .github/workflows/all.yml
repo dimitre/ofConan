@@ -18,6 +18,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
+      - uses: actions/checkout@v2
       - name: Install Conan
         id: conan
         uses: turtlebrowser/get-conan@main
