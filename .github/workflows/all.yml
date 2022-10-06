@@ -14,7 +14,7 @@ jobs:
   example_matrix:
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -26,4 +26,5 @@ jobs:
         run: echo "${{ steps.conan.outputs.version }}"
 
       - name: Conan build
-        run: echo "${{ steps.conan.outputs.version }}"            
+        run: mkdir build; cd build; conan install .. --build=missing
+        
