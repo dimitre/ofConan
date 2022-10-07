@@ -1,2 +1,2 @@
 [requires]
-assimp/5.2.5
+assimp/5.2.2
