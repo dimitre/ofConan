@@ -24,8 +24,9 @@ jobs:
 
     steps:
       - if: ${{ runner.os == 'Linux' }}
-      # if: matrix.os == 'ubuntu-latest'
-
+        # run: sudo apt-get install libgtk2.0-dev libudev-dev assimp=5.2.5
+        run: sudo apt-get update
+      - if: ${{ runner.os == 'Linux' }}
         # run: sudo apt-get install libgtk2.0-dev libudev-dev assimp=5.2.5
         run: sudo apt-get assimp=5.2.5
       - uses: actions/checkout@v2
